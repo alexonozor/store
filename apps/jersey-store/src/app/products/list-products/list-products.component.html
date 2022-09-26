@@ -1,0 +1,33 @@
+
+<div style="margin: 20px auto; width: 800px;">
+    <div style="padding: 10; width: 100%; text-align: right;">
+        <a [routerLink]="['../products/new']"  > Create New Product</a>
+     </div>
+     <table class="content-table">
+         <thead>
+             <tr>
+                 <th>Image</th>
+                 <th>Name</th>
+                 <th>Description</th>
+                 <th>Price</th>
+                 <th>Sku</th>
+                 <th>Action</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr *ngFor="let product of $products | async; let even = even; let odd = odd">
+                 <td><img [src]="product.image" /></td>
+                 <td>{{ product.name }}</td>
+                 <td>{{ product.description }}</td>
+                 <td>{{ product.price | currency }}</td>
+                 <td>{{ product.sku }}</td>
+                 <td>
+                     <a [routerLink]="['./', product.id, 'edit']" routerLinkActive="router-link-active" >Edit</a>
+     
+                 </td>
+     
+             </tr>
+         </tbody>
+     </table>
+</div>
+

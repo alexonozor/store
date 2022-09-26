@@ -1,0 +1,32 @@
+
+<div style="margin: 20px auto; width: 800px;">
+    <h3 style="text-align: center;"> Create Product</h3>
+
+<form  [formGroup]="productForm">
+   
+    <div class="container">
+      <label for="uname"><b>Name</b></label>
+      <input type="text" placeholder="T-shirt" formControlName="name" name="uname" required>
+  
+      <label for="uname"><b>Description</b></label>
+      <input type="text" placeholder="Description" formControlName="description" name="uname" required>
+        
+      <label for="uname"><b>Price</b></label>
+      <input type="number" placeholder="Price" formControlName="price" name="uname" required>
+
+      <label for="uname"><b>Sku</b></label>
+      <input type="text" placeholder="Sku" formControlName="sku" name="uname" required>
+  
+  
+          
+      <button type="submit" (click)="save()" [disabled]="!productForm.valid">{{isLoading ? 'Please wait..' : 'SAVE' }}</button>
+     
+    </div>
+
+
+  
+  
+    
+  </form>
+
+</div>

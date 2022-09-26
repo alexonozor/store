@@ -5,6 +5,7 @@
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
     "jersey-store": "apps/jersey-store",
-    "jersey-store-e2e": "apps/jersey-store-e2e"
+    "jersey-store-e2e": "apps/jersey-store-e2e",
+    "products": "libs/products"
   }
 }
